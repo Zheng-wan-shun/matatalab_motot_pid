@@ -68,11 +68,11 @@ void SysTick_Handler(void)
 {
 	  time_count++;
     system_time++;
-	if(system_time>=84000)
-	{
-		current_speed = speed_count/11 ;
-		
-	  system_time=0;
-		speed_count=0;
-	}
+//	if(system_time>=84000)
+//	{
+//		current_speed = speed_count/11 ;
+//		
+//	  system_time=0;
+//		speed_count=0;
+//	}
 }

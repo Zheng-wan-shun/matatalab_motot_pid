@@ -50,10 +50,11 @@ void motor_speed_pid(float set_speed)
 	 out_value = kp *  err  + (kd * ( err - 2 * last_err + previous_err ))	+ ki * (err - last_err) ;	
 	
   //	  printf("err:%d\t\n",err); 
-   current_pwm  =  current_pwm + out_value;
+   
 	
 	 last_err = err;
 	 previous_err = last_err;
+	 current_pwm  =  current_pwm + out_value;
 	 printf("current_pwm:%f\t\n",current_pwm); 
 	 motor_pwm_set(current_pwm);
 

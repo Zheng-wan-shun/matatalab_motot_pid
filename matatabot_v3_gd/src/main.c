@@ -24,11 +24,11 @@
 #include "drv_motor_control.h"
 float current_speed;
 float err =0;
-
+int32_t count;
 float last_err =0;
 float previous_err = 0; 
 int32_t speed_count;
-float kp = 1.85;
+float kp = 5.85;
 float ki = 0.05;
 float kd = 0.52;
 float out_value = 0.0; 
@@ -52,11 +52,11 @@ int main(void)
 	 			
     while(1)
     {
-      motor_speed_pid(72);
+    //  motor_speed_pid(32);
 			printf("current_speed:%f\t\n",(current_speed));
 //			printf("%d\t\n",(int)(speed_count));
 //      printf("current_pwm:%f\t\n",current_pwm);
-		 
+		 printf("%d",count);
 //			printf("%f\t\n",value);
 	    drv_delay_ms(84000);
 
