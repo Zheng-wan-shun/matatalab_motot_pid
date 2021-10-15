@@ -2,9 +2,9 @@
 #include "drv_uart.h"
 #include "drv_exit.h"
 #include "drv_pwm.h"
+#include "drv_time.h"
 
-
-void timer0_config(int32_t pwm)
+void timer0_config(float pwm_value1,float pwm_value2)
 {
     /* -----------------------------------------------------------------------
     TIMER1 configuration: generate 3 PWM signals with 3 different duty cycles:
@@ -23,7 +23,7 @@ void timer0_config(int32_t pwm)
 
     /* TIMER1 configuration */
 #ifdef GD32F330
-    timer_initpara.prescaler         = 0;
+    timer_initpara.prescaler         = 83;
 #endif /* GD32F330 */
 #ifdef GD32F350
     timer_initpara.prescaler         = 107;
@@ -46,11 +46,11 @@ void timer0_config(int32_t pwm)
     timer_channel_output_config(TIMER0,TIMER_CH_0,&timer_ocintpara);
     timer_channel_output_config(TIMER0,TIMER_CH_1,&timer_ocintpara);
     
-    timer_channel_output_pulse_value_config(TIMER0,TIMER_CH_0,pwm);
+    timer_channel_output_pulse_value_config(TIMER0,TIMER_CH_0,pwm_value1);
     timer_channel_output_mode_config(TIMER0,TIMER_CH_0,TIMER_OC_MODE_PWM0);
     timer_channel_output_shadow_config(TIMER0,TIMER_CH_0,TIMER_OC_SHADOW_ENABLE);
 
-    timer_channel_output_pulse_value_config(TIMER0,TIMER_CH_1,0);
+    timer_channel_output_pulse_value_config(TIMER0,TIMER_CH_1,pwm_value2);
     timer_channel_output_mode_config(TIMER0,TIMER_CH_1,TIMER_OC_MODE_PWM0);
     timer_channel_output_shadow_config(TIMER0,TIMER_CH_1,TIMER_OC_SHADOW_ENABLE);
 
@@ -73,7 +73,7 @@ void timer0_config(int32_t pwm)
 
 
 
-void timer1_config(int32_t pwm)
+void timer1_config(float pwm_value3,float pwm_value4)
 {
     /* -----------------------------------------------------------------------
     TIMER1 configuration: generate 3 PWM signals with 3 different duty cycles:
@@ -92,7 +92,7 @@ void timer1_config(int32_t pwm)
 
     /* TIMER1 configuration */
 #ifdef GD32F330
-    timer_initpara.prescaler         = 0;
+    timer_initpara.prescaler         = 83;
 #endif /* GD32F330 */
 #ifdef GD32F350
     timer_initpara.prescaler         = 107;
@@ -115,11 +115,11 @@ void timer1_config(int32_t pwm)
     timer_channel_output_config(TIMER1,TIMER_CH_0,&timer_ocintpara);
     timer_channel_output_config(TIMER1,TIMER_CH_1,&timer_ocintpara);
     
-    timer_channel_output_pulse_value_config(TIMER1,TIMER_CH_0,pwm);
+    timer_channel_output_pulse_value_config(TIMER1,TIMER_CH_0,pwm_value3);
     timer_channel_output_mode_config(TIMER1,TIMER_CH_0,TIMER_OC_MODE_PWM0);
     timer_channel_output_shadow_config(TIMER1,TIMER_CH_0,TIMER_OC_SHADOW_DISABLE);
 
-    timer_channel_output_pulse_value_config(TIMER1,TIMER_CH_1,0);
+    timer_channel_output_pulse_value_config(TIMER1,TIMER_CH_1,pwm_value4);
     timer_channel_output_mode_config(TIMER1,TIMER_CH_1,TIMER_OC_MODE_PWM0);
     timer_channel_output_shadow_config(TIMER1,TIMER_CH_1,TIMER_OC_SHADOW_DISABLE);
 
@@ -137,14 +137,7 @@ void timer1_config(int32_t pwm)
 //    nvic_irq_enable(TIMER1_IRQn, 0,0);
 }
 
-void motor_pwm(int32_t pwm)
-{ 
-	
-    timer1_config(pwm);
-	  timer0_config(pwm);
-
-		
 
 
-}	
+
 

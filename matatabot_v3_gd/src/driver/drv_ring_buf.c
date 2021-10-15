@@ -8,6 +8,7 @@ void drv_ringbuf_init(RING_BUF_DEF_STRUCT* ring_buf, uint8_t* src_buf, uint16_t 
     ring_buf->max_size_mask = (src_buf_maxsize - 1);
 }
 
+
 void drv_ringbuf_read(RING_BUF_DEF_STRUCT* src_ringbuf, uint16_t len, uint8_t* dst_buf)
 {
     uint16_t count = 0;

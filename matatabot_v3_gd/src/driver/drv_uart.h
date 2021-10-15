@@ -1,6 +1,6 @@
 #ifndef __DRV_UART_H__
 #define __DRV_UART_H__
-
+#include "gd32f3x0.h"
 #include <stdint.h>
 #include "gd32f3x0_usart.h"
 #include "stdio.h"
@@ -29,5 +29,6 @@ int fputc(int ch, FILE *f);
 void drv_uart1_init(uint32_t baud_rate);
 void drv_uart_write_byte(uint8_t port, uint8_t inputData);
 void drv_uart_printf(uint8_t port, char *fmt,...);
-
+void USART0_IRQHandler(void);
+void drv_uart_tx_rx(void);
 #endif

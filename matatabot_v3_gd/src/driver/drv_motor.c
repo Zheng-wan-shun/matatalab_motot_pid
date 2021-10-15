@@ -7,7 +7,7 @@
 #include "stdint.h"
 #include "drv_pwm.h"
 
-
+#include "drv_time.h"
 
 void motor_pin_config(void)
 {

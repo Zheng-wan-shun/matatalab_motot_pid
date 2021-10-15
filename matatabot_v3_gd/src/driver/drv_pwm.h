@@ -13,9 +13,8 @@ typedef enum
 	
 }motor_right_left;
 
-void timer0_config(int32_t pwm);
-void timer1_config(int32_t pwm);
-void motor_pwm(int32_t pwm);
+void timer0_config(float pwm_value1,float pwm_value2);
+void timer1_config(float pwm_value3,float pwm_value4);
 
 
 

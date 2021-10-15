@@ -7,11 +7,12 @@
 #include "drv_motor.h"
 #include "drv_motor_control.h"
 #include "gd32f3x0_rcu.h"
+#include "drv_time.h"
 #define ENCODE_B1 BF_5
 #define ENCODE_B2 AF_7
 extern uint32_t speed_count;
 extern uint32_t current_speed;
-
+extern int32_t i;
 extern int32_t count;
 
 void encode_gpio_init(void)
@@ -62,7 +63,8 @@ int get_encode_gpio_signal(uint16_t GPIO_PIN)
 	drv_gpio_digital_read(GPIO_PIN);	
 
 }
-
+extern int32_t num[50];
+extern 	int16_t j;
 void EXTI4_15_IRQHandler()
 {
 	
@@ -70,13 +72,27 @@ void EXTI4_15_IRQHandler()
 		{
        exti_interrupt_flag_clear(EXTI_4);
 		   speed_count=speed_count+1;
+			
 		if(	1 == drv_gpio_digital_read(PB_5))
 		{
 			count++;
+			i++;
+		
+			num[i]=count;
+			 if(i>50)
+			 {
+				 i=0;
+			 }
 		}
      else if (0 == drv_gpio_digital_read(PB_5))
 		 {
 			 count--;
+			 i++;
+			 num[i]=count;
+			 if(i>50)
+			 {
+				 i=0;
+			 }
 		 }
 		
 		}

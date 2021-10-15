@@ -4,10 +4,10 @@
 #include "drv_exit.h"
 #include "drv_pwm.h"
 #include "drv_motor.h"
+#include "drv_time.h"
 
 volatile unsigned long system_time = 0;
 extern float current_speed;
-long time_count;
 extern int32_t speed_count;
 unsigned long drv_millis(void)
 {
@@ -23,7 +23,7 @@ void drv_delay_us(uint32_t us)
     uint32_t reload;
 	
     reload = SysTick->LOAD;
-    ticks = us * (SystemCoreClock / 84000000);
+    ticks = us * (SystemCoreClock / 1000000);
     tcnt = 0;
     told = SysTick->VAL;
     while(1)
@@ -60,19 +60,29 @@ void drv_delay_ms(unsigned long ms)
 void drv_systime_init(void)
 {
     system_time = 0;
-    SysTick_Config(SystemCoreClock / 84000);
+    SysTick_Config(SystemCoreClock / 1000);
 	  NVIC_SetPriority(SysTick_IRQn, 0x00U);
 }
 
+extern int32_t arr[];
+extern int16_t j;
 void SysTick_Handler(void)
 {
-	  time_count++;
+
     system_time++;
-//	if(system_time>=84000)
+//	if(system_time>=1000)
 //	{
-//		current_speed = speed_count/11 ;
+//    current_speed = speed_count/11 ;
+//		j++;
+//		arr[j] = current_speed;
+//			
+//			if(j>=100)
+//			{
+//				j=0;
+//				
+//			}
 //		
-//	  system_time=0;
+//    system_time=0;
 //		speed_count=0;
 //	}
 }
