@@ -4,7 +4,7 @@
 #include <stdint.h>
 
 #define SYSTEM_CLK_M      72
-
+#define  sys_time  3000
 unsigned long drv_millis(void);
 void drv_delay_us(uint32_t us);
 void drv_delay_ms(unsigned long ms);

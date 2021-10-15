@@ -5,10 +5,12 @@
 #include "drv_pwm.h"
 #include "drv_motor.h"
 #include "drv_motor_control.h"
+
 volatile unsigned long system_time = 0;
 extern float current_speed;
 long time_count;
 extern int32_t speed_count;
+
 unsigned long mill_time;
 unsigned long drv_millis(void)
 {
@@ -31,7 +33,7 @@ void set_get_speed_time(unsigned long ms)
 		
 	  time_count=0;
 		speed_count=0;
-		motor_speed_pid(80);
+		motor_speed_pid(50);
 	}
 	
 }
@@ -74,6 +76,7 @@ void drv_delay_us(uint32_t us)
 void drv_delay_ms(unsigned long ms)
 {
     unsigned long start_time = drv_millis();
+	  //sys_time=ms;
     while((drv_millis() - start_time) <= ms) 
     {
         //do nothing
@@ -83,7 +86,7 @@ void drv_delay_ms(unsigned long ms)
 void drv_systime_init(void)
 {
     system_time = 0;
-    SysTick_Config(SystemCoreClock / 2000);
+    SysTick_Config(SystemCoreClock / sys_time);
 	  NVIC_SetPriority(SysTick_IRQn, 0x00U);
 }
 void drv_speedtime_init(void)
