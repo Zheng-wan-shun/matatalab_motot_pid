@@ -176,11 +176,9 @@ extern int32_t Data[];
 void USART0_IRQHandler(void)
 {
 	//printf("a\t\n");
-    if(RESET != usart_interrupt_flag_get(USART0, USART_INT_FLAG_RBNE)){      
-		a= usart_data_receive(USART0);
-			
-		//	ring_buf_write_command(Data[8]);
-			usart_data_transmit(USART0,a);
+   if(RESET != usart_interrupt_flag_get(USART0, USART_INT_FLAG_RBNE)){      
+			a = usart_data_receive(USART0);
+			usart_data_transmit(USART0, a);
       usart_interrupt_disable(USART0, USART_INT_RBNE);
 				 
        }
@@ -200,9 +198,7 @@ void drv_uart_tx_rx(void)
 //	 usart_interrupt_enable(USART0, USART_INT_TBE);
 //	 while(RESET == usart_flag_get(USART0, USART_FLAG_TC))
 //    usart_interrupt_enable(USART0, USART_INT_RBNE);
-	while (RESET == usart_flag_get(USART0, USART_FLAG_TC));
-	
-	//drv_ringbuf_write(RING_BUF_DEF_STRUCT* des_ringbuf, uint8_t* src, uint16_t len)
-  usart_interrupt_enable(USART0, USART_INT_RBNE);
+ while(RESET == usart_flag_get(USART0, USART_FLAG_TC)); 
+    usart_interrupt_enable(USART0, USART_INT_RBNE);
 	
 }

@@ -55,17 +55,17 @@ int main(void)
 	 			
     while(1)
     {
-			//drv_uart_tx_rx();
+			drv_uart_tx_rx();
       
 			set_get_speed_time(sys_time);
-			printf("time_count:%ld\t\n",time_count);
-			// motor_speed_pid(20);
-			printf("current_speed:%f\t\n",(current_speed));
-			printf("speed_count:%d\t\n",(int)(speed_count));
-      printf("current_pwm:%f\t\n",current_pwm);
-			printf("mill_time:%ld",mill_time);
-//			printf("%f\t\n",value);
-	   drv_delay_ms(1000);            //延时时间不能大于sys_time
+//			printf("time_count:%ld\t\n",time_count);
+//			// motor_speed_pid(20);
+//			printf("current_speed:%f\t\n",(current_speed));
+//			printf("speed_count:%d\t\n",(int)(speed_count));
+//      printf("current_pwm:%f\t\n",current_pwm);
+//			printf("mill_time:%ld",mill_time);
+////			printf("%f\t\n",value);
+	  // drv_delay_ms(10);            //延时时间不能大于sys_time
 
     }
 }
