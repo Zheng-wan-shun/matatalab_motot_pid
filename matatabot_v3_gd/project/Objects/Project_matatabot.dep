@@ -322,7 +322,7 @@ I (..\GD32F3x0_library\GD32F3x0_standard_peripheral\Include\gd32f3x0_usart.h)(0x
 I (..\GD32F3x0_library\GD32F3x0_standard_peripheral\Include\gd32f3x0_wwdgt.h)(0x61691EB4)
 I (..\GD32F3x0_library\GD32F3x0_standard_peripheral\Include\gd32f3x0_misc.h)(0x61691EB4)
 I (..\GD32F3x0_library\GD32F3x0_standard_peripheral\Include\gd32f3x0_tsi.h)(0x61691EB4)
-F (..\src\main.c)(0x61692A0E)(--c99 -c --cpu Cortex-M4 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\src -I ..\src\driver -I ..\GD32F3x0_library\CMSIS -I ..\GD32F3x0_library\CMSIS\GD\GD32F3x0\Source\ARM -I ..\GD32F3x0_library\CMSIS\GD\GD32F3x0\Include -I ..\GD32F3x0_library\GD32F3x0_standard_peripheral\Include -I ..\src\communication -I ..\src\common-IE:\keil5\GigaDevice\GD32F3x0_DFP\2.0.0\Device\Include-IE:\keil5\GigaDevice\GD32F3x0_DFP\2.0.0-D__UVISION_VERSION="536" -DGD32F330-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (..\src\main.c)(0x61692D63)(--c99 -c --cpu Cortex-M4 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\src -I ..\src\driver -I ..\GD32F3x0_library\CMSIS -I ..\GD32F3x0_library\CMSIS\GD\GD32F3x0\Source\ARM -I ..\GD32F3x0_library\CMSIS\GD\GD32F3x0\Include -I ..\GD32F3x0_library\GD32F3x0_standard_peripheral\Include -I ..\src\communication -I ..\src\common-IE:\keil5\GigaDevice\GD32F3x0_DFP\2.0.0\Device\Include-IE:\keil5\GigaDevice\GD32F3x0_DFP\2.0.0-D__UVISION_VERSION="536" -DGD32F330-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (..\GD32F3x0_library\CMSIS\GD\GD32F3x0\Include\gd32f3x0.h)(0x61691EB4)
 I (..\GD32F3x0_library\CMSIS\core_cm4.h)(0x61691EB4)
 I (E:\keil5\ARM\ARMCC\include\stdint.h)(0x6025237E)
@@ -831,6 +831,45 @@ I (E:\keil5\ARM\ARMCC\include\stdlib.h)(0x60252374)
 I (E:\keil5\ARM\ARMCC\include\string.h)(0x6025237E)
 I (..\src\driver\drv_motor_control.h)(0x61691FAE)
 I (..\src\driver\drv_time.h)(0x61691F15)
+F (..\src\driver\drv_command.c)(0x61691EB4)(--c99 -c --cpu Cortex-M4 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\src -I ..\src\driver -I ..\GD32F3x0_library\CMSIS -I ..\GD32F3x0_library\CMSIS\GD\GD32F3x0\Source\ARM -I ..\GD32F3x0_library\CMSIS\GD\GD32F3x0\Include -I ..\GD32F3x0_library\GD32F3x0_standard_peripheral\Include -I ..\src\communication -I ..\src\common-IE:\keil5\GigaDevice\GD32F3x0_DFP\2.0.0\Device\Include-IE:\keil5\GigaDevice\GD32F3x0_DFP\2.0.0-D__UVISION_VERSION="536" -DGD32F330-o .\objects\drv_command.o --omf_browse .\objects\drv_command.crf --depend .\objects\drv_command.d)
+I (..\GD32F3x0_library\CMSIS\GD\GD32F3x0\Include\gd32f3x0.h)(0x61691EB4)
+I (..\GD32F3x0_library\CMSIS\core_cm4.h)(0x61691EB4)
+I (E:\keil5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (..\GD32F3x0_library\CMSIS\core_cmInstr.h)(0x61691EB4)
+I (..\GD32F3x0_library\CMSIS\core_cmFunc.h)(0x61691EB4)
+I (..\GD32F3x0_library\CMSIS\core_cm4_simd.h)(0x61691EB4)
+I (..\GD32F3x0_library\CMSIS\GD\GD32F3x0\Include\system_gd32f3x0.h)(0x61691EB4)
+I (..\src\gd32f3x0_libopt.h)(0x61691EB4)
+I (..\GD32F3x0_library\GD32F3x0_standard_peripheral\Include\gd32f3x0_adc.h)(0x61691EB4)
+I (..\GD32F3x0_library\GD32F3x0_standard_peripheral\Include\gd32f3x0_crc.h)(0x61691EB4)
+I (..\GD32F3x0_library\GD32F3x0_standard_peripheral\Include\gd32f3x0_ctc.h)(0x61691EB4)
+I (..\GD32F3x0_library\GD32F3x0_standard_peripheral\Include\gd32f3x0_dbg.h)(0x61691EB4)
+I (..\GD32F3x0_library\GD32F3x0_standard_peripheral\Include\gd32f3x0_dma.h)(0x61691EB4)
+I (..\GD32F3x0_library\GD32F3x0_standard_peripheral\Include\gd32f3x0_exti.h)(0x61691EB4)
+I (..\GD32F3x0_library\GD32F3x0_standard_peripheral\Include\gd32f3x0_fmc.h)(0x61691EB4)
+I (..\GD32F3x0_library\GD32F3x0_standard_peripheral\Include\gd32f3x0_gpio.h)(0x61691EB4)
+I (..\GD32F3x0_library\GD32F3x0_standard_peripheral\Include\gd32f3x0_syscfg.h)(0x61691EB4)
+I (..\GD32F3x0_library\GD32F3x0_standard_peripheral\Include\gd32f3x0_i2c.h)(0x61691EB4)
+I (..\GD32F3x0_library\GD32F3x0_standard_peripheral\Include\gd32f3x0_fwdgt.h)(0x61691EB4)
+I (..\GD32F3x0_library\GD32F3x0_standard_peripheral\Include\gd32f3x0_pmu.h)(0x61691EB4)
+I (..\GD32F3x0_library\GD32F3x0_standard_peripheral\Include\gd32f3x0_rcu.h)(0x61691EB4)
+I (..\GD32F3x0_library\GD32F3x0_standard_peripheral\Include\gd32f3x0_rtc.h)(0x61691EB4)
+I (..\GD32F3x0_library\GD32F3x0_standard_peripheral\Include\gd32f3x0_spi.h)(0x61691EB4)
+I (..\GD32F3x0_library\GD32F3x0_standard_peripheral\Include\gd32f3x0_timer.h)(0x61691EB4)
+I (..\GD32F3x0_library\GD32F3x0_standard_peripheral\Include\gd32f3x0_usart.h)(0x61691EB4)
+I (..\GD32F3x0_library\GD32F3x0_standard_peripheral\Include\gd32f3x0_wwdgt.h)(0x61691EB4)
+I (..\GD32F3x0_library\GD32F3x0_standard_peripheral\Include\gd32f3x0_misc.h)(0x61691EB4)
+I (..\GD32F3x0_library\GD32F3x0_standard_peripheral\Include\gd32f3x0_tsi.h)(0x61691EB4)
+I (..\src\driver\drv_uart.h)(0x61691EB4)
+I (E:\keil5\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (..\src\driver\drv_exit.h)(0x61691EB4)
+I (..\src\driver\drv_pwm.h)(0x61691EB4)
+I (E:\keil5\ARM\ARMCC\include\stdlib.h)(0x60252374)
+I (E:\keil5\ARM\ARMCC\include\string.h)(0x6025237E)
+I (..\src\driver\drv_motor_control.h)(0x61691FAE)
+I (..\src\driver\drv_time.h)(0x61691F15)
+I (..\src\driver\drv_command.h)(0x61691EB4)
+I (..\src\common\system_def.h)(0x61691EB4)
 F (..\src\communication\communication_link.c)(0x61691EB4)(--c99 -c --cpu Cortex-M4 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\src -I ..\src\driver -I ..\GD32F3x0_library\CMSIS -I ..\GD32F3x0_library\CMSIS\GD\GD32F3x0\Source\ARM -I ..\GD32F3x0_library\CMSIS\GD\GD32F3x0\Include -I ..\GD32F3x0_library\GD32F3x0_standard_peripheral\Include -I ..\src\communication -I ..\src\common-IE:\keil5\GigaDevice\GD32F3x0_DFP\2.0.0\Device\Include-IE:\keil5\GigaDevice\GD32F3x0_DFP\2.0.0-D__UVISION_VERSION="536" -DGD32F330-o .\objects\communication_link.o --omf_browse .\objects\communication_link.crf --depend .\objects\communication_link.d)
 I (E:\keil5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (E:\keil5\ARM\ARMCC\include\string.h)(0x6025237E)
