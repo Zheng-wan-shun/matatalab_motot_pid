@@ -13,7 +13,7 @@ typedef enum
 }motor_transfer;
 
 
-void motor_speed_pid(motor_transfer motor,float set_speed);
+void motor_speed_pid(float set_speed);
 void motor_go(motor_transfer motor,float pwm);
 void motor_direction(void);
 void cylinder_number(int32_t distance);

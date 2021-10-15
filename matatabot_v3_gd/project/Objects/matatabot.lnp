@@ -26,6 +26,7 @@
 ".\objects\drv_exit.o"
 ".\objects\drv_pwm.o"
 ".\objects\drv_motor_control.o"
+".\objects\drv_time.o"
 ".\objects\communication_link.o"
 ".\objects\message.o"
 ".\objects\crc16.o"

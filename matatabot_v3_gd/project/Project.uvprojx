@@ -548,6 +548,11 @@
               <FileType>1</FileType>
               <FilePath>..\src\driver\drv_motor_control.c</FilePath>
             </File>
+            <File>
+              <FileName>drv_time.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\src\driver\drv_time.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

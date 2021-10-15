@@ -3,10 +3,9 @@
 .\objects\communication_link.o: E:\keil5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\communication_link.o: ..\src\common\system_def.h
 .\objects\communication_link.o: ..\src\driver\drv_uart.h
-.\objects\communication_link.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
-.\objects\communication_link.o: ..\GD32F3x0_library\GD32F3x0_standard_peripheral\Include\gd32f3x0_usart.h
 .\objects\communication_link.o: ..\GD32F3x0_library\CMSIS\GD\GD32F3x0\Include\gd32f3x0.h
 .\objects\communication_link.o: ..\GD32F3x0_library\CMSIS\core_cm4.h
+.\objects\communication_link.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\communication_link.o: ..\GD32F3x0_library\CMSIS\core_cmInstr.h
 .\objects\communication_link.o: ..\GD32F3x0_library\CMSIS\core_cmFunc.h
 .\objects\communication_link.o: ..\GD32F3x0_library\CMSIS\core_cm4_simd.h

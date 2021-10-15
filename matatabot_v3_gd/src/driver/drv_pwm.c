@@ -2,7 +2,6 @@
 #include "drv_uart.h"
 #include "drv_exit.h"
 #include "drv_pwm.h"
-#include "drv_time.h"
 
 void timer0_config(float pwm_value1,float pwm_value2)
 {
@@ -136,8 +135,6 @@ void timer1_config(float pwm_value3,float pwm_value4)
     
 //    nvic_irq_enable(TIMER1_IRQn, 0,0);
 }
-
-
 
 
 
