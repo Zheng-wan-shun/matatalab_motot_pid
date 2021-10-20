@@ -34,4 +34,5 @@
 .\objects\drv_motor.o: E:\keil5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\drv_motor.o: ..\src\driver\drv_gpio.h
 .\objects\drv_motor.o: ..\src\driver\drv_pwm.h
+.\objects\drv_motor.o: ..\src\driver\drv_receive_buff.h
 .\objects\drv_motor.o: ..\src\driver\drv_time.h

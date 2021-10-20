@@ -4,7 +4,7 @@
 #include "drv_pwm.h"
 #include "drv_motor_control.h"
 #include "drv_time.h"
-
+#include "drv_receive_buff.h"
 extern float current_speed;
 extern float previous_err;
 extern int32_t speed_count;

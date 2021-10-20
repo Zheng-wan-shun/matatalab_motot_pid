@@ -36,3 +36,4 @@
 .\objects\drv_time.o: E:\keil5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\drv_time.o: ..\src\driver\drv_motor_control.h
 .\objects\drv_time.o: ..\src\driver\drv_time.h
+.\objects\drv_time.o: ..\src\driver\drv_receive_buff.h

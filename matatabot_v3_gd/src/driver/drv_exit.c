@@ -7,7 +7,7 @@
 #include "drv_motor.h"
 #include "drv_motor_control.h"
 #include "gd32f3x0_rcu.h"
-
+#include "drv_receive_buff.h"
 extern uint32_t speed_count;
 extern uint32_t current_speed;
 void encode_gpio_init(void)

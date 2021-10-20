@@ -22,7 +22,9 @@
 #include "drv_gpio.h"
 #include "drv_pwm.h"
 #include "drv_motor_control.h"
-#include "gd32f3x0.h"                   
+#include "gd32f3x0.h" 
+#include "drv_receive_buff.h"
+
 float current_speed;
 float err =0;
 
@@ -34,9 +36,10 @@ float ki = 0.05;
 float kd = 0.52;
 float out_value = 0.0; 
 float current_pwm=0;
-
+volatile int32_t recevie_data;
 extern long time_count;
 extern unsigned long mill_time;
+extern float p_value;
 int main(void)
 {
 
@@ -48,19 +51,23 @@ int main(void)
 	  int_config();
 //	  nvic_priority_group_set(NVIC_PRIGROUP_PRE2_SUB2);
 	  drv_uart0_init(115200);
-    usart_interrupt_enable(USART0, USART_INT_TBE);
+    //usart_interrupt_enable(USART0, USART_INT_TBE);
 	  nvic_irq_enable(USART0_IRQn, 1, 1);
+	 usart_interrupt_enable(USART0, USART_INT_RBNE);
    motor_init();
-   //motor_go(motor_forward,150);
+  // motor_go(motor_forward,(int)p_value);
 	 			
     while(1)
     {
-			drv_uart_tx_rx();
-      
-			set_get_speed_time(sys_time);
+			receive_done();
+			motor_go(motor_forward,p_value );
+			printf("%f\t\n",p_value);
+
+//      
+//			set_get_speed_time(sys_time);
 //			printf("time_count:%ld\t\n",time_count);
 //			// motor_speed_pid(20);
-//			printf("current_speed:%f\t\n",(current_speed));
+		//	printf("current_speed:%f\t\n",(current_speed));
 //			printf("speed_count:%d\t\n",(int)(speed_count));
 //      printf("current_pwm:%f\t\n",current_pwm);
 //			printf("mill_time:%ld",mill_time);

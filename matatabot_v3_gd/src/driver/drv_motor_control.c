@@ -4,6 +4,7 @@
 #include "drv_pwm.h"
 #include "drv_motor_control.h"
 #include "drv_systime.h"
+#include "drv_receive_buff.h"
 #define default_pwm 0
 
 extern float current_speed;
@@ -85,7 +86,7 @@ void motor_speed_pid(float set_speed)
 	  err = set_speed - current_speed;
 	  printf("err:%f\t\n",err); 
 	 out_value = kp *  err  + (kd * ( err - 2 * last_err + previous_err ))	+ ki * (err - last_err) ;	
-	
+	printf("current_speed:%f\t\n",(current_speed));
   //	  printf("err:%d\t\n",err); 
    current_pwm  =  current_pwm + out_value;
 	

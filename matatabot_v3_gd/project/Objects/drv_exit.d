@@ -37,3 +37,4 @@
 .\objects\drv_exit.o: E:\keil5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\drv_exit.o: ..\src\driver\drv_motor.h
 .\objects\drv_exit.o: ..\src\driver\drv_motor_control.h
+.\objects\drv_exit.o: ..\src\driver\drv_receive_buff.h

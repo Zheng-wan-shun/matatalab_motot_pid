@@ -36,3 +36,4 @@
 .\objects\drv_uart.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\drv_uart.o: ..\src\driver\drv_ring_buf.h
 .\objects\drv_uart.o: ..\src\driver\drv_uart.h
+.\objects\drv_uart.o: ..\src\driver\drv_receive_buff.h

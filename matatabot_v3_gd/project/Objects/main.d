@@ -38,3 +38,4 @@
 .\objects\main.o: ..\src\driver\drv_gpio.h
 .\objects\main.o: ..\src\driver\drv_pwm.h
 .\objects\main.o: ..\src\driver\drv_motor_control.h
+.\objects\main.o: ..\src\driver\drv_receive_buff.h

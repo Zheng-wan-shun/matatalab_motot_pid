@@ -8,11 +8,11 @@
 #include "communication_link.h"
 #include "drv_ring_buf.h"
 #include "drv_uart.h"
-
+#include "drv_receive_buff.h"
 #define DATA_TX_BUFSIZE      128
 static RING_BUF_DEF_STRUCT s_tx_ring_buf;
-volatile uint8_t txcount = 0; 
-static uint8_t s_link_tx_buf[DATA_TX_BUFSIZE];
+
+//static uint8_t s_link_tx_buf[DATA_TX_BUFSIZE];
 
 
 
@@ -170,35 +170,20 @@ int fputc(int ch, FILE *f)
 //}
 
 
-
-int32_t a;
+extern  uint8_t recevie_data_temp ;
+extern volatile int32_t recevie_data;
 extern int32_t Data[];
 void USART0_IRQHandler(void)
-{
-	//printf("a\t\n");
-   if(RESET != usart_interrupt_flag_get(USART0, USART_INT_FLAG_RBNE)){      
-			a = usart_data_receive(USART0);
-			usart_data_transmit(USART0, a);
-      usart_interrupt_disable(USART0, USART_INT_RBNE);
-				 
-       }
-    
+{ 
+    if(RESET != usart_interrupt_flag_get(USART0, USART_INT_FLAG_RBNE)){
+        /* receive data */
+        recevie_data_temp = usart_data_receive(USART0);
+				receive_data();
 
-    if(RESET != usart_interrupt_flag_get(USART0, USART_INT_FLAG_TBE))
-			{
-				
-            usart_interrupt_disable(USART0, USART_INT_TBE);
-      }
+			
+       }   
     }
 
-void drv_uart_tx_rx(void)
-{
-	
-//	 nvic_irq_enable(USART0_IRQn, 0, 0);
-//	 usart_interrupt_enable(USART0, USART_INT_TBE);
-//	 while(RESET == usart_flag_get(USART0, USART_FLAG_TC))
-//    usart_interrupt_enable(USART0, USART_INT_RBNE);
- while(RESET == usart_flag_get(USART0, USART_FLAG_TC)); 
-    usart_interrupt_enable(USART0, USART_INT_RBNE);
-	
-}
+
+
+

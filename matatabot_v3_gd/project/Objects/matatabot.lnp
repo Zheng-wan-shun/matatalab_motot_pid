@@ -28,6 +28,8 @@
 ".\objects\drv_motor_control.o"
 ".\objects\drv_time.o"
 ".\objects\drv_command.o"
+".\objects\drv_receive_buff.o"
+".\objects\drv_ringbuf.o"
 ".\objects\communication_link.o"
 ".\objects\message.o"
 ".\objects\crc16.o"

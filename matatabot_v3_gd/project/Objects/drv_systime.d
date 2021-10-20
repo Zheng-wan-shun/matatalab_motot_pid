@@ -35,3 +35,5 @@
 .\objects\drv_systime.o: E:\keil5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\drv_systime.o: ..\src\driver\drv_motor.h
 .\objects\drv_systime.o: ..\src\driver\drv_motor_control.h
+.\objects\drv_systime.o: ..\src\driver\drv_uart.h
+.\objects\drv_systime.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdio.h

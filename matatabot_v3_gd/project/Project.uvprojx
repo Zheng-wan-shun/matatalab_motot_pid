@@ -558,6 +558,16 @@
               <FileType>1</FileType>
               <FilePath>..\src\driver\drv_command.c</FilePath>
             </File>
+            <File>
+              <FileName>drv_receive_buff.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\src\driver\drv_receive_buff.c</FilePath>
+            </File>
+            <File>
+              <FileName>drv_ringbuf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\src\driver\drv_ringbuf.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

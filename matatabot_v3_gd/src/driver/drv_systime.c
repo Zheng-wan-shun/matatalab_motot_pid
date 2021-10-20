@@ -5,12 +5,12 @@
 #include "drv_pwm.h"
 #include "drv_motor.h"
 #include "drv_motor_control.h"
-
+#include "drv_uart.h"
 volatile unsigned long system_time = 0;
 extern float current_speed;
 long time_count;
 extern int32_t speed_count;
-
+extern volatile int32_t recevie_data;
 unsigned long mill_time;
 unsigned long drv_millis(void)
 {
@@ -33,7 +33,8 @@ void set_get_speed_time(unsigned long ms)
 		
 	  time_count=0;
 		speed_count=0;
-		motor_speed_pid(50);
+		//motor_speed_pid(recevie_data);
+		printf("recevie_data:%d",recevie_data);
 	}
 	
 }
